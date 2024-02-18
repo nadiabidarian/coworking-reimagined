@@ -12,3 +12,16 @@ function showSlides() {
     slides[slideIndex-1].style.display = "block";
     setTimeout(showSlides, 2000); // Change image every 2 seconds
 }
+
+// Add event listeners to the stacked images
+var images = document.querySelectorAll('.image-container img');
+images.forEach(function(image) {
+    image.addEventListener('click', function() {
+        // Hide all images
+        images.forEach(function(img) {
+            img.style.display = 'none';
+        });
+        // Show the clicked image
+        this.style.display = 'block';
+    });
+});

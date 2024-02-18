@@ -1,20 +1,27 @@
 /* Style for the banner */
 .banner {
     text-align: center;
-    padding: 100px 0;
+    padding: 50px 0;
     background-color: #f0f0f0;
 }
 
+.banner-frame {
+    max-width: 800px;
+    margin: 0 auto;
+    border: 2px solid #ccc;
+    padding: 20px;
+}
+
 .banner h1 {
-    font-size: 48px;
+    font-size: 36px;
     margin-bottom: 20px;
 }
 
 /* Style for the slideshow */
 .slideshow-container {
-    max-width: 1000px;
     position: relative;
     margin: auto;
+    overflow: hidden;
 }
 
 .mySlides {
@@ -34,5 +41,7 @@
 
 .image-container img {
     width: 100%;
+    max-width: 300px; /* Limit the width of stacked images */
     margin-bottom: 20px;
+    cursor: pointer;
 }
