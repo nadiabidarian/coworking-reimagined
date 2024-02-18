@@ -1,0 +1,38 @@
+/* Style for the banner */
+.banner {
+    text-align: center;
+    padding: 100px 0;
+    background-color: #f0f0f0;
+}
+
+.banner h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+/* Style for the slideshow */
+.slideshow-container {
+    max-width: 1000px;
+    position: relative;
+    margin: auto;
+}
+
+.mySlides {
+    display: none;
+}
+
+/* Style for the content section */
+.content {
+    text-align: center;
+    padding: 50px 0;
+}
+
+.content h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.image-container img {
+    width: 100%;
+    margin-bottom: 20px;
+}
