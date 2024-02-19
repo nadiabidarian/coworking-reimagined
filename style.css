@@ -24,6 +24,7 @@
 img {width: 100%;}
 
 .headline{ /* make sure the headline is on top of slideshow-container */
+    font-family:'Times New Roman', Times, serif;
     position: absolute;
     top: 5%;
     left: 50%;
@@ -33,7 +34,7 @@ img {width: 100%;}
     z-index: 2;
 }
 
-/* Style for the content section */
+/* Article */
 
 body{ /* general font stuff */
     font-family: 'Times New Roman', Times, serif;
@@ -50,8 +51,7 @@ body{ /* general font stuff */
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 
-.content h2 {
-    font-size: 36px;
+.content h3 {
     margin-bottom: 20px;
 }
 
@@ -62,7 +62,7 @@ body{ /* general font stuff */
     cursor: pointer;
 }
 
-p{ /* how the article text looks*/
+p{ /* how the article text looks */
     text-align: justify;
     line-height: 1.6;
 }
