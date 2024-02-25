@@ -1,3 +1,54 @@
+/* quote */
+
+.style{
+    color: beige
+}
+
+
+
+
+.pquote {
+    float: left;
+    font-family: 'courier';
+    width: 100px;
+    font-size: 20px;
+    color: crimson;
+    font-weight: bold;
+    padding: 30px;
+    margin: 0px 15px 15px 0px;
+}
+
+blockquote {
+    margin: 0; /* gets rid of the default blockquote margin */
+}
+.pquotetwo {
+    display: inline-block;
+    width: 600px;
+    color: crimson;
+    font-weight: bold;
+    padding: 50px;
+    margin: 0px 15px 15px 0px;
+}
+
+blockquote {
+    margin: 15; /* gets rid of the default blockquote margin */
+}
+.pquotethree {
+    float: right;
+    font-family: 'courier';
+    width: 100px;
+    font-size: 20px;
+    color: crimson;
+    font-weight: bold;
+    padding: 30px;
+    margin: 0px 15px 15px 0px;
+}
+
+blockquote {
+    margin: 0; /* gets rid of the default blockquote margin */
+}
+
+
 /* Banner */
 .banner{
     position: relative;
@@ -40,12 +91,14 @@ body{ /* general font stuff */
     margin: 0;
     padding: 0;
     background-color: #f5f5f5;
+    font-size: 15px;
 }
+
 .content { /* put a box around the article + increase margins */
     margin-top: 500px;
     width: 60%;
     margin: auto;
-    background-color: #fff;
+    background-color: rgb(254, 241, 216);
     padding: 20px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
