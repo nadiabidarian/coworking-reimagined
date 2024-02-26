@@ -3,37 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   
-
-    <button onclick="typeWriter()">Click me</button>
-
-    
-    <p id="demo"></p>
     <title>Work, Reimagined</title>
-    <script>
-    var i = 0;
-    var txt = 'Work, Reimagined';
-    var speed = 50;
-    
-    function typeWriter() {
-      if (i < txt.length) {
-        document.getElementById("demo").innerHTML += txt.charAt(i);
-        i++;
-        setTimeout(typeWriter, speed);
-      }
-    }
-    </script>
-    
-    </body>
-    </html>
-
-    <link rel="stylesheet" href="style.css">
+    <link rel = "stylesheet" href = "style.css">
 </head>
+
 <body>
 
 <!-- image slideshow -->
 <div class="banner">
-    <h1 class="headline">Work, Reimagined</h1>
+    <h1 class="headline"><span id="demo"></span></h1>
     <div class="slideshow-container">
         <div class="mySlides">
             <img src="work_1.JPG" style="width:100%">
@@ -55,6 +33,28 @@
         </div>
     </div>
 </div>
+
+<script>
+    var i = 0;
+    var txt = 'Work, Reimagined';
+    var speed = 50;
+
+function typeWriter() {
+  if (i < txt.length) {
+    document.getElementById("demo").innerHTML += txt.charAt(i);
+    i++;
+    setTimeout(typeWriter, speed);
+    }
+}
+
+window.onload = function() {
+    typeWriter();
+};
+
+</script>
+
+</body>
+</html>
 
 <!-- written content -->
 <div class="content">
