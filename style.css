@@ -51,6 +51,7 @@ blockquote {
 
 /* Banner */
 .banner{
+    font-size: 10vw;
     position: relative;
     width: 100%;
     max-width: 100vw;
