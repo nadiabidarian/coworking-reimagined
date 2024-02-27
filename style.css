@@ -12,7 +12,21 @@
     background-size: cover; /* Adjust the image size */
     background-position: relative; /* Center the image */
     /* Add any other styling you want */
+
+     /* Responsive styles */
+     max-width: 100%; /* Ensures the div doesn't exceed the width of its container */
+
+    
 }
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+    .container {
+        height: auto; /* Allows the height to adjust based on content */
+    }
+}
+
+
 
 
 .pquote {
