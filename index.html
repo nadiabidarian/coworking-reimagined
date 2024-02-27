@@ -9,8 +9,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
     <link rel = "stylesheet" href = "style.css">
 </head>
-
 <body>
+
 
 <!-- image slideshow -->
 <div class="banner">
@@ -37,27 +37,6 @@
     </div>
 </div>
 
-<script>
-    var i = 0;
-    var txt = 'Work, Reimagined';
-    var speed = 50;
-
-function typeWriter() {
-  if (i < txt.length) {
-    document.getElementById("demo").innerHTML += txt.charAt(i);
-    i++;
-    setTimeout(typeWriter, speed);
-    }
-}
-
-window.onload = function() {
-    typeWriter();
-};
-
-</script>
-
-</body>
-</html>
 <!-- coffee shop content -->
 
 <div class="container">
@@ -71,6 +50,13 @@ window.onload = function() {
     <h3>by Nadia Bidarian, Marlene Alanis, Yasmin Mustefa, and Jordan Lam</h3>
     <h3>4 Mar 2024</h3>
 
+    <div class="image-container">
+        <img src="1.jpg" alt="Image 1">
+        <img src="2.jpg" alt="Image 2">
+        <img src="3.jpg" alt="Image 3">
+    </div>
+   
+        <h1 id="headline"></h1>
 
     <div class="text">
         <p>Remote workers in San Francisco, who make up 32.5% of the city’s total workforce, may have found themselves in one of three places recently: Their bed. Their desk. Perhaps their couch. Then back to bed.</p>
@@ -80,9 +66,12 @@ window.onload = function() {
         <p>Kennedy describes the vibe as more “entrepreneurial” than coworking, although The Battery is in the process of converting its gym to an official coworking space due to member demand. The Battery enforces a strict electronics curfew, where all members must put away their electronics after 6 p.m., as well as rules against taking phone calls except inside a phone booth and a strict no photo or video policy. Kennedy said The Battery has these provisions in place to maintain its purpose as a social club first and foremost.</p>
         <aside class="pquote">
             <blockquote>
-                <p>“I feel like I get a little stir crazy when I'm stuck in an apartment all day"</p>
+                <p id="quoteText"></p> <!-- Changed the ID to quoteText -->
             </blockquote>
-        </aside>
+    </aside>
+    </div>
+
+        
         <p>“It's not a space for you to go and sit at eight hours and just hammer away at work. It's a place where you can do work in between transitioning from one meeting to another or while you're waiting for your friends to show up,” Kennedy said.</p>
         <p>Other spaces in San Francisco explicitly encourage using the venue as a coworking space during the day. The idea for one such space struck former WeWork employee Teddy Kramer as he walked by Starbucks one day and noticed that people weren’t only drinking coffee inside. Instead, they were working.</p>
         <p>“I feel like I get a little stir crazy when I'm stuck in an apartment all day,” said Alaura McGuire, a UC Law SF student. McGuire says the atmosphere around other people in coffee shops allows her to refocus on work.</p>
