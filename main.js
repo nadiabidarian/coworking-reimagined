@@ -64,18 +64,23 @@ document.getElementById('returnButton').addEventListener('click', function() {
 
 var i = 0;
 var txt = 'Work, Reimagined';
-var speed = 50;
+var speed = 50; // Speed of typing
 
 function typeWriterHeadline() {
     if (i < txt.length) {
         document.getElementById("demo").innerHTML += txt.charAt(i);
         i++;
-                setTimeout(typeWriterHeadline, headlineSpeed);
+        setTimeout(typeWriterHeadline, speed); // Use `speed` variable here
     } else {
-                // Call the quote typewriter after the headline is finished
-        }
-        window.onload = function() {
-typeWriter();
+        // Call the quote typewriter after the headline is finished
+        // You might want to call another function here or just leave it empty if there's nothing else to do
+    }
+}
+
+// Fix the window.onload assignment to ensure it doesn't conflict with other onload functions
+window.onload = function() {
+    typeWriterHeadline();
+    // You can initialize other functions here to ensure they all load correctly.
 };
 
 function typeWriterQuote() {
