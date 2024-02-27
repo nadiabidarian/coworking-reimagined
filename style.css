@@ -4,7 +4,15 @@
     color: beige
 }
 
-
+/* coffee shop content */
+.container {
+    width: 100%; /* Adjust as needed */
+    height: 100vh; /* Adjust as needed */
+    background-image: url('1.jpg');
+    background-size: cover; /* Adjust the image size */
+    background-position: relative; /* Center the image */
+    /* Add any other styling you want */
+}
 
 
 .pquote {
