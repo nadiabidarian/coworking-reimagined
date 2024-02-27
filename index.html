@@ -34,26 +34,6 @@
     </div>
 </div>
 
-<script>
-    var i = 0;
-    var txt = 'Work, Reimagined';
-    var speed = 50;
-    
-    function typeWriterHeadline() {
-        if (i < txt.length) {
-            document.getElementById("demo").innerHTML += txt.charAt(i);
-            i++;
-                    setTimeout(typeWriterHeadline, headlineSpeed);
-        } else {
-                    // Call the quote typewriter after the headline is finished
-            }
-            window.onload = function() {
-    typeWriter();
-};
-</script>
-
-</body>
-</html>
 <!-- coffee shop content -->
 
 <div class="container">
@@ -73,7 +53,6 @@
         <img src="3.jpg" alt="Image 3">
     </div>
    
-    <body>
         <h1 id="headline"></h1>
 
     <div class="text">
@@ -89,38 +68,6 @@
     </aside>
     </div>
 
-    <script>
- 
-    function typeWriterQuote() {
-                var i = 0;
-                var txt = 'I feel like I get a little stir crazy when I\'m stuck in an apartment all day';
-                var speed = 75;
-                var pauseTime = 5000;
-        
-                function typeWriter() {
-                    if (quoteIndex < quoteTxt.length) {
-                    document.getElementById("quoteText").innerHTML += quoteTxt.charAt(quoteIndex); // Corrected the ID here
-                    quoteIndex++;
-                    setTimeout(typeWriter, quoteSpeed);
-                } else {
-                    setTimeout(resetTypewriter, pauseTime);
-                }
-            }
-                function resetTypewriter() {
-                    quoteIndex = 0;
-                    document.getElementById("quoteText").innerHTML = ''; // Corrected the ID here
-                    typeWriter();
-                }
-                typeWriter();
-            };
-
-            window.onload = function() {
-                    typeWriterHeadline();
-                };
-        </script>
-</body>
-</html>
-    
         
         <p>“It's not a space for you to go and sit at eight hours and just hammer away at work. It's a place where you can do work in between transitioning from one meeting to another or while you're waiting for your friends to show up,” Kennedy said.</p>
         <p>Other spaces in San Francisco explicitly encourage using the venue as a coworking space during the day. The idea for one such space struck former WeWork employee Teddy Kramer as he walked by Starbucks one day and noticed that people weren’t only drinking coffee inside. Instead, they were working.</p>
