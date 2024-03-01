@@ -15,24 +15,17 @@ function showSlides() {
 }
 
 
-// Coffee shop content
-
-// Define an array of hotspot coordinates
 var hotspots = [
     { top: '20%', left: '20%', width: '20%', height: '20%', image: '2.jpg' },
     { top: '50%', left: '50%', width: '20%', height: '20%', image: '3.jpg' }
-    // Add more hotspot objects as needed
 ];
 
-var mainImage = '1.jpg'; // Main background image
+var mainImage = '1.jpg'; 
 
-// Set initial background image
 document.querySelector('.container').style.backgroundImage = "url('" + mainImage + "')";
 
-// Variable to track current background image
 var currentImage = mainImage;
 
-// Add event listeners to hotspots
 hotspots.forEach(function(hotspot) {
     var hotspotElement = document.createElement('div');
     hotspotElement.className = 'hotspot';
@@ -44,7 +37,7 @@ hotspots.forEach(function(hotspot) {
     hotspotElement.style.cursor = 'pointer';
     hotspotElement.addEventListener('click', function() {
         if (currentImage !== mainImage) {
-            return; // Do nothing if an alternate image is already shown
+            return; 
         }
         document.querySelector('.container').style.backgroundImage = "url('" + hotspot.image + "')";
         document.getElementById('returnButton').style.display = 'block';
@@ -53,59 +46,66 @@ hotspots.forEach(function(hotspot) {
     document.querySelector('.container').appendChild(hotspotElement);
 });
 
-// Add event listener to the return button
 document.getElementById('returnButton').addEventListener('click', function() {
     document.querySelector('.container').style.backgroundImage = "url('" + mainImage + "')";
     document.getElementById('returnButton').style.display = 'none';
     currentImage = mainImage;
 });
 
-
-
-var i = 0;
-var txt = 'Work, Reimagined';
-var speed = 50; // Speed of typing
+// typewriter - headline
+var headlineIndex = 0;
+var headlineTxt = 'Work, Reimagined';
+var headlineSpeed = 100; // Adjust the speed as needed
+var headlinePauseTime = 5000; // Pause time for the headline
 
 function typeWriterHeadline() {
-    if (i < txt.length) {
-        document.getElementById("demo").innerHTML += txt.charAt(i);
-        i++;
-        setTimeout(typeWriterHeadline, speed); // Use `speed` variable here
+    if (headlineIndex < headlineTxt.length) {
+        document.getElementById("demo").innerHTML += headlineTxt.charAt(headlineIndex);
+        headlineIndex++;
+        setTimeout(typeWriterHeadline, headlineSpeed); 
     } else {
-        // Call the quote typewriter after the headline is finished
-        // You might want to call another function here or just leave it empty if there's nothing else to do
+        setTimeout(resetHeadlineTypewriter, headlinePauseTime);
     }
 }
 
-// Fix the window.onload assignment to ensure it doesn't conflict with other onload functions
-window.onload = function() {
+function resetHeadlineTypewriter() {
+    headlineIndex = 0;
+    document.getElementById("demo").innerHTML = '';
     typeWriterHeadline();
-    // You can initialize other functions here to ensure they all load correctly.
-};
+}
 
+// Quote typewriter
 function typeWriterQuote() {
-    var i = 0;
-    var txt = 'I feel like I get a little stir crazy when I\'m stuck in an apartment all day';
-    var speed = 75;
-    var pauseTime = 5000;
+    var sentence = "'I feel like I get a little stir crazy when I'm stuck in an apartment all day'";
+    var quoteSpeed = 75;
+    var quoteElement = document.getElementById("quoteText");
 
     function typeWriter() {
-        if (quoteIndex < quoteTxt.length) {
-        document.getElementById("quoteText").innerHTML += quoteTxt.charAt(quoteIndex); // Corrected the ID here
-        quoteIndex++;
-        setTimeout(typeWriter, quoteSpeed);
-    } else {
-        setTimeout(resetTypewriter, pauseTime);
+        var charIndex = 0;
+        var interval = setInterval(function() {
+            if (charIndex < sentence.length) {
+                quoteElement.innerHTML += sentence.charAt(charIndex);
+                charIndex++;
+            } else {
+                clearInterval(interval); // Stop typing after completing the sentence
+            }
+        }, quoteSpeed);
     }
+
+    typeWriter(); // Start the typewriter effect
+    window.addEventListener('scroll', function() {
+        var quoteText = document.getElementById("quoteText");
+        if (isElementInViewport(quoteText)) {
+            // If the quote element is in the viewport, start the typewriter effect again
+            typeWriter();
+        }
+    });
+
+
 }
-    function resetTypewriter() {
-        quoteIndex = 0;
-        document.getElementById("quoteText").innerHTML = ''; // Corrected the ID here
-        typeWriter();
-    }
-    typeWriter();
-};
+
 
 window.onload = function() {
-        typeWriterHeadline();
-    };
+    typeWriterHeadline();
+    typeWriterQuote();
+};
