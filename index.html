@@ -123,6 +123,30 @@ window.onload = function() {
         <p>“I think Neon kind of reminds me of what I remember from old times when people used to connect. Now, it seems like everything is more disconnected with the work-from-home kind of environment,” said Sasha Zabelin, a local small business owner who spoke at one of Neon’s nighttime events on Feb. 8. Zabelin, a former entrepreneur and software engineer who hails from Ukraine, established Outbaking, a bakery in Berkeley CA that hires Ukrainian refugees.</p>
         <p>Other community hubs offering coworking spaces and nighttime events are geared towards specific demographics. The Ruby, located inside a former winery from the 1880s in the Mission District, caters specifically towards nonbinary, transfeminine, and female-identifying creatives.</p>
         <p>“We all know that we live in a world, in the arts and also just in general, where femme, nonbinary and BIPOC voices are not necessarily elevated or respected or acknowledged in the same way,” Director of the Ruby Peggy Lee said. “Giving these opportunities for us to come together is empowering.”</p>
+        
+        <video width="1280" height="720" id="video_player" controls="controls"> 
+            <source src="Peggy.mp4" type="video/mp4">
+        </video>
+
+        <script>
+            var video_player = document.getElementById('video_player');
+        
+            // Auto play, half volume.
+            video_player.play()
+            video_player.volume = 1;
+        
+            // Play / pause.
+            video_player.addEventListener('click', function () {
+                if (video_player.paused == false) {
+                    video_player.pause();
+                    video_player.firstChild.nodeValue = 'Play';
+                } else {
+                    video_player.play();
+                    video_player.firstChild.nodeValue = 'Pause';
+                }
+            });
+        </script>
+
         <p>The Ruby, The Battery and Neon all cast their own nets for San Francisco professionals, appealing to a different array of people who ultimately seek flexibility and camaraderie within their workday — and after hours.</p>
         <p>Not everyone is convinced though. Berkeley Haas Professor Juliana Schroeder, who studies social interaction and interpersonal processes, has called this issue the “loneliness epidemic.” She says the ability of the coworking spaces to provide opportunities for people to engage with one another is a good idea but is worried about solving the root of the problem.</p>
         <aside class="pquotethree">
