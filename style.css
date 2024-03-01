@@ -14,37 +14,21 @@
 
 /* coffee shop content */
 .container {
-    width: 100%; /* Adjust as needed */
-    height: 56.222vw; /* Adjust as needed */
-    background-image: url('1.jpg');
-    background-size: contain; /* Adjust the image size */
-    position: relative; /* Center the image */
-    /* Add any other styling you want */
-
-     /* Responsive styles */
-     max-width: 100%; /* Ensures the div doesn't exceed the width of its container */
-
-}
-
-.hotspot {
+    width: 100%;
+    height: 56.222vw;
+    background-size: contain;
+    position: relative;
+    max-width: 100%;
+  }
+  
+  .hotspot {
     position: absolute;
     cursor: pointer;
-    /* Set the width, height, and position of your hotspot */
-}
-
-#hotspot1 {
-    top: 20%;
-    left: 20%;
-    width: 20%;
-    height: 20%;
-}
-
-#hotspot2 {
-    top: 50%;
-    left: 50%;
-    width: 20%;
-    height: 20%;
-}
+  }
+  
+  #returnButton {
+    display: none;
+  }
 
 /* END of coffee shop content here */
 
