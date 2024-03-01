@@ -91,19 +91,64 @@ window.onload = function() {
             <blockquote>
                 <p id="quoteText"></p> <!-- Changed the ID to quoteText -->
             </blockquote>
-    </aside>
-    </div>
-
+        </aside>
         
         <p>“It's not a space for you to go and sit at eight hours and just hammer away at work. It's a place where you can do work in between transitioning from one meeting to another or while you're waiting for your friends to show up,” Kennedy said.</p>
         <p>Other spaces in San Francisco explicitly encourage using the venue as a coworking space during the day. The idea for one such space struck former WeWork employee Teddy Kramer as he walked by Starbucks one day and noticed that people weren’t only drinking coffee inside. Instead, they were working.</p>
         <p>“I feel like I get a little stir crazy when I'm stuck in an apartment all day,” said Alaura McGuire, a UC Law SF student. McGuire says the atmosphere around other people in coffee shops allows her to refocus on work.</p>
         <p>McGuire is just one of many who frequent coffee shops as a way to escape the social isolation felt at home.</p>
         <p>“[Remote work] was the one of the biggest shocks I'd have in my life,” said Kramer, who worked fully remotely in 2019. “It was hard. I'll be really honest about that. It was not easy being alone every single day of the week for work.”</p>
+        <video width="1280" height="720" id="video_player" controls="controls"> 
+            <source src="Teddy.mp4" type="video/mp4">
+        </video>
+
+        <script>
+            var video_player = document.getElementById('video_player');
+        
+            // Auto play, half volume.
+            video_player.play()
+            video_player.volume = 1;
+        
+            // Play / pause.
+            video_player.addEventListener('click', function () {
+                if (video_player.paused == false) {
+                    video_player.pause();
+                    video_player.firstChild.nodeValue = 'Play';
+                } else {
+                    video_player.play();
+                    video_player.firstChild.nodeValue = 'Pause';
+                }
+            });
+        </script>
+        
         <p>Kramer went on to found Neon, a coworking space in Cow Hollow that allows anyone to drop in to use its wifi, printing services, desk space, phone booths and drip coffee for $5 per hour or $20 per day. No long-term membership is required for access.</p>
         <p>“I think Neon kind of reminds me of what I remember from old times when people used to connect. Now, it seems like everything is more disconnected with the work-from-home kind of environment,” said Sasha Zabelin, a local small business owner who spoke at one of Neon’s nighttime events on Feb. 8. Zabelin, a former entrepreneur and software engineer who hails from Ukraine, established Outbaking, a bakery in Berkeley CA that hires Ukrainian refugees.</p>
         <p>Other community hubs offering coworking spaces and nighttime events are geared towards specific demographics. The Ruby, located inside a former winery from the 1880s in the Mission District, caters specifically towards nonbinary, transfeminine, and female-identifying creatives.</p>
         <p>“We all know that we live in a world, in the arts and also just in general, where femme, nonbinary and BIPOC voices are not necessarily elevated or respected or acknowledged in the same way,” Director of the Ruby Peggy Lee said. “Giving these opportunities for us to come together is empowering.”</p>
+        
+        <video width="1280" height="720" id="video_player" controls="controls"> 
+            <source src="Peggy.mp4" type="video/mp4">
+        </video>
+
+        <script>
+            var video_player = document.getElementById('video_player');
+        
+            // Auto play, half volume.
+            video_player.play()
+            video_player.volume = 1;
+        
+            // Play / pause.
+            video_player.addEventListener('click', function () {
+                if (video_player.paused == false) {
+                    video_player.pause();
+                    video_player.firstChild.nodeValue = 'Play';
+                } else {
+                    video_player.play();
+                    video_player.firstChild.nodeValue = 'Pause';
+                }
+            });
+        </script>
+
         <p>The Ruby, The Battery and Neon all cast their own nets for San Francisco professionals, appealing to a different array of people who ultimately seek flexibility and camaraderie within their workday — and after hours.</p>
         <p>Not everyone is convinced though. Berkeley Haas Professor Juliana Schroeder, who studies social interaction and interpersonal processes, has called this issue the “loneliness epidemic.” She says the ability of the coworking spaces to provide opportunities for people to engage with one another is a good idea but is worried about solving the root of the problem.</p>
         <aside class="pquotethree">
@@ -128,7 +173,8 @@ window.onload = function() {
         <p>“If it was close to my home in Oakland I would consider it, maybe a day or two a week, to mix things up.”</p>
         <p>Cost, location and work schedule were the most common factors when considering whether to join a coworking space. Most also seemed content with working at coffee shops and did not feel compelled to experiment with new spaces.</p>
         <p>“Everyone here has a side hustle,” Kramer, CEO of Neon, said. “We have a tech worker who’s a leather maker, a financier who’s a chocolatier and makes homemade cookies from home. Everyone is chasing a dream. My hope is that Neon is a place that not only fosters it, but maybe lights that spark that says, maybe it’s time to quit that job of mine and take a risk.”</p>
-    </div>
+    
+    </div>    
 </div>
 
 <script src="main.js"></script>
