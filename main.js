@@ -13,7 +13,6 @@ function showSlides() {
 }
 showSlides();
 
-<<<<<<< Updated upstream
 
 var hotspots = [
     { top: '20%', left: '20%', width: '20%', height: '20%', image: '2.jpg' },
@@ -57,12 +56,6 @@ var headlineIndex = 0;
 var headlineTxt = 'Work, Reimagined';
 var headlineSpeed = 100; // Adjust the speed as needed
 var headlinePauseTime = 5000; // Pause time for the headline
-=======
-// Animate the headline
-var i = 0;
-var txt = 'Work, Reimagined';
-var speed = 50;
->>>>>>> Stashed changes
 
 function typeWriterHeadline() {
     if (headlineIndex < headlineTxt.length) {
@@ -70,7 +63,6 @@ function typeWriterHeadline() {
         headlineIndex++;
         setTimeout(typeWriterHeadline, headlineSpeed); 
     } else {
-<<<<<<< Updated upstream
         setTimeout(resetHeadlineTypewriter, headlinePauseTime);
     }
 }
@@ -116,39 +108,3 @@ window.onload = function() {
     typeWriterHeadline();
     typeWriterQuote();
 };
-=======
-                // Call the quote typewriter after the headline is finished
-        }
-        window.onload = function() {
-typeWriter();
-};
-
-window.onload = function() {
-    typeWriterHeadline();
-};
-
-// animate the pull quote
-// function typeWriterQuote() {
-//     var i = 0;
-//     var txt = 'I feel like I get a little stir crazy when I\'m stuck in an apartment all day';
-//     var speed = 75;
-//     var pauseTime = 5000;
-
-//     function typeWriter() {
-//         if (quoteIndex < quoteTxt.length) {
-//         document.getElementById("quoteText").innerHTML += quoteTxt.charAt(quoteIndex); // Corrected the ID here
-//         quoteIndex++;
-//         setTimeout(typeWriter, quoteSpeed);
-//     } else {
-//         setTimeout(resetTypewriter, pauseTime);
-//     }
-// }
-//     function resetTypewriter() {
-//         quoteIndex = 0;
-//         document.getElementById("quoteText").innerHTML = ''; // Corrected the ID here
-//         typeWriter();
-//     }
-//     typeWriter();
-// };
-
->>>>>>> Stashed changes
