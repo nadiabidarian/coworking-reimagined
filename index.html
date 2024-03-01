@@ -96,8 +96,28 @@ window.onload = function() {
         <p>“I feel like I get a little stir crazy when I'm stuck in an apartment all day,” said Alaura McGuire, a UC Law SF student. McGuire says the atmosphere around other people in coffee shops allows her to refocus on work.</p>
         <p>McGuire is just one of many who frequent coffee shops as a way to escape the social isolation felt at home.</p>
         <p>“[Remote work] was the one of the biggest shocks I'd have in my life,” said Kramer, who worked fully remotely in 2019. “It was hard. I'll be really honest about that. It was not easy being alone every single day of the week for work.”</p>
-        <video width="1280" height="720" controls src="Teddy.mp4" type="video/mp4">
+        <video width="1280" height="720" id="video_player" controls="controls"> 
+            <source src="Teddy.mp4" type="video/mp4">
         </video>
+
+        <script>
+            var video_player = document.getElementById('video_player');
+        
+            // Auto play, half volume.
+            video_player.play()
+            video_player.volume = 1;
+        
+            // Play / pause.
+            video_player.addEventListener('click', function () {
+                if (video_player.paused == false) {
+                    video_player.pause();
+                    video_player.firstChild.nodeValue = 'Play';
+                } else {
+                    video_player.play();
+                    video_player.firstChild.nodeValue = 'Pause';
+                }
+            });
+        </script>
         
         <p>Kramer went on to found Neon, a coworking space in Cow Hollow that allows anyone to drop in to use its wifi, printing services, desk space, phone booths and drip coffee for $5 per hour or $20 per day. No long-term membership is required for access.</p>
         <p>“I think Neon kind of reminds me of what I remember from old times when people used to connect. Now, it seems like everything is more disconnected with the work-from-home kind of environment,” said Sasha Zabelin, a local small business owner who spoke at one of Neon’s nighttime events on Feb. 8. Zabelin, a former entrepreneur and software engineer who hails from Ukraine, established Outbaking, a bakery in Berkeley CA that hires Ukrainian refugees.</p>
