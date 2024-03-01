@@ -21,12 +21,12 @@
     max-width: 100%;
   }
   
-  .hotspot {
+.hotspot {
     position: absolute;
     cursor: pointer;
   }
   
-  #returnButton {
+#returnButton {
     display: none;
   }
 
