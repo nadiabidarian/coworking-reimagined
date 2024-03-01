@@ -4,16 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Work, Reimagined</title>
-    <!-- Lora Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
-    <!-- DM Sans Font -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet">
     <link rel = "stylesheet" href = "style.css">
 </head>
+
 
 
 <body>
@@ -46,7 +42,7 @@
 
 <script>
     var i = 0;
-    var txt = 'WORK, REIMAGINED';
+    var txt = 'Work, Reimagined';
     var speed = 50;
 
 function typeWriter() {
@@ -67,18 +63,18 @@ window.onload = function() {
 <!-- coffee shop content -->
 
 <div class="container">
-    <!-- Your content goes here -->
     <div id="hotspot1" class="hotspot"></div>
-    <div id="hotspot2" class="hotspot"></div>
-    <button id="returnButton" style="display:none;">Return</button>
+    <button id="returnButton">Return</button>
 </div>
 
 <!-- written content -->
 
-
+<body>
 <div class="content">
     <h3>by Nadia Bidarian, Marlene Alanis, Yasmin Mustefa, and Jordan Lam</h3>
+    <h3>4 Mar 2024</h3>
 
+   
         <h1 id="headline"></h1>
 
     <div class="text">
@@ -89,26 +85,33 @@ window.onload = function() {
         <p>Kennedy describes the vibe as more “entrepreneurial” than coworking, although The Battery is in the process of converting its gym to an official coworking space due to member demand. The Battery enforces a strict electronics curfew, where all members must put away their electronics after 6 p.m., as well as rules against taking phone calls except inside a phone booth and a strict no photo or video policy. Kennedy said The Battery has these provisions in place to maintain its purpose as a social club first and foremost.</p>
         <aside class="pquote">
             <blockquote>
-                <p id="quoteText"></p> <!-- Changed the ID to quoteText -->
+                <p id="quoteText"></p>
             </blockquote>
         </aside>
+        
+        <aside class="author">
+            <blockquote>
+                <p id="authorName">-Alaura McGuire</p>
+            </blockquote>
+        </aside>        
         
         <p>“It's not a space for you to go and sit at eight hours and just hammer away at work. It's a place where you can do work in between transitioning from one meeting to another or while you're waiting for your friends to show up,” Kennedy said.</p>
         <p>Other spaces in San Francisco explicitly encourage using the venue as a coworking space during the day. The idea for one such space struck former WeWork employee Teddy Kramer as he walked by Starbucks one day and noticed that people weren’t only drinking coffee inside. Instead, they were working.</p>
         <p>“I feel like I get a little stir crazy when I'm stuck in an apartment all day,” said Alaura McGuire, a UC Law SF student. McGuire says the atmosphere around other people in coffee shops allows her to refocus on work.</p>
         <p>McGuire is just one of many who frequent coffee shops as a way to escape the social isolation felt at home.</p>
         <p>“[Remote work] was the one of the biggest shocks I'd have in my life,” said Kramer, who worked fully remotely in 2019. “It was hard. I'll be really honest about that. It was not easy being alone every single day of the week for work.”</p>
-        <video width="1280" height="720" id="video_player" controls="controls"> 
+        
+        <video width="640" height="480" id="video_player" controls="controls"> 
             <source src="Teddy.mp4" type="video/mp4">
         </video>
 
         <script>
             var video_player = document.getElementById('video_player');
-        
+
             // Auto play, half volume.
             video_player.play()
             video_player.volume = 1;
-        
+
             // Play / pause.
             video_player.addEventListener('click', function () {
                 if (video_player.paused == false) {
@@ -124,19 +127,18 @@ window.onload = function() {
         <p>Kramer went on to found Neon, a coworking space in Cow Hollow that allows anyone to drop in to use its wifi, printing services, desk space, phone booths and drip coffee for $5 per hour or $20 per day. No long-term membership is required for access.</p>
         <p>“I think Neon kind of reminds me of what I remember from old times when people used to connect. Now, it seems like everything is more disconnected with the work-from-home kind of environment,” said Sasha Zabelin, a local small business owner who spoke at one of Neon’s nighttime events on Feb. 8. Zabelin, a former entrepreneur and software engineer who hails from Ukraine, established Outbaking, a bakery in Berkeley CA that hires Ukrainian refugees.</p>
         <p>Other community hubs offering coworking spaces and nighttime events are geared towards specific demographics. The Ruby, located inside a former winery from the 1880s in the Mission District, caters specifically towards nonbinary, transfeminine, and female-identifying creatives.</p>
-        <p>“We all know that we live in a world, in the arts and also just in general, where femme, nonbinary and BIPOC voices are not necessarily elevated or respected or acknowledged in the same way,” Director of the Ruby Peggy Lee said. “Giving these opportunities for us to come together is empowering.”</p>
         
-        <video width="1280" height="720" id="video_player" controls="controls"> 
+        <video width="640" height="480" id="video_player" controls="controls"> 
             <source src="Peggy.mp4" type="video/mp4">
         </video>
 
         <script>
             var video_player = document.getElementById('video_player');
-        
+
             // Auto play, half volume.
             video_player.play()
             video_player.volume = 1;
-        
+
             // Play / pause.
             video_player.addEventListener('click', function () {
                 if (video_player.paused == false) {
@@ -148,14 +150,20 @@ window.onload = function() {
                 }
             });
         </script>
-
+        
+        <p>“We all know that we live in a world, in the arts and also just in general, where femme, nonbinary and BIPOC voices are not necessarily elevated or respected or acknowledged in the same way,” Director of the Ruby Peggy Lee said. “Giving these opportunities for us to come together is empowering.”</p>
         <p>The Ruby, The Battery and Neon all cast their own nets for San Francisco professionals, appealing to a different array of people who ultimately seek flexibility and camaraderie within their workday — and after hours.</p>
         <p>Not everyone is convinced though. Berkeley Haas Professor Juliana Schroeder, who studies social interaction and interpersonal processes, has called this issue the “loneliness epidemic.” She says the ability of the coworking spaces to provide opportunities for people to engage with one another is a good idea but is worried about solving the root of the problem.</p>
         <aside class="pquotethree">
-            <blockquote>
-                “They think it's going to be bad. That's the prediction”</p>
+            <blockquote id="quoteThreeText">
             </blockquote>
-        </aside>
+        </aside>       
+        
+        <aside class="authortwo">
+            <blockquote>
+                <p id="authortwo">-Juliana Schroeder</p>
+            </blockquote>
+        </aside>        
         <p>“I worry that people's missed predictions about whether some of these things will be worth their time might end up leading them not to go, you know, as much as they could.”</p>
         <p>Schroeder conducted a study in 2011 about people’s willingness to interact with strangers in public settings and found that people enjoyed interacting with others on the train. In a Chicago Tribune op-ed, Schroeder encouraged a train car dedicated to social interactions. However, she said there was a lot of pushback.</p>
         <p>“They think it's going to be bad. That's the prediction,” she said. “And we're like well, ‘have you tried it?’ 
@@ -173,10 +181,9 @@ window.onload = function() {
         <p>“If it was close to my home in Oakland I would consider it, maybe a day or two a week, to mix things up.”</p>
         <p>Cost, location and work schedule were the most common factors when considering whether to join a coworking space. Most also seemed content with working at coffee shops and did not feel compelled to experiment with new spaces.</p>
         <p>“Everyone here has a side hustle,” Kramer, CEO of Neon, said. “We have a tech worker who’s a leather maker, a financier who’s a chocolatier and makes homemade cookies from home. Everyone is chasing a dream. My hope is that Neon is a place that not only fosters it, but maybe lights that spark that says, maybe it’s time to quit that job of mine and take a risk.”</p>
-    
-    </div>    
+    </div>
 </div>
-
+</body>
 <script src="main.js"></script>
 
 </body>

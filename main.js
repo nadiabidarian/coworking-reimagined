@@ -1,7 +1,5 @@
 // JavaScript code for the slideshow
 var slideIndex = 0;
-showSlides();
-
 function showSlides() {
     var i;
     var slides = document.getElementsByClassName("mySlides");
@@ -13,26 +11,28 @@ function showSlides() {
     slides[slideIndex-1].style.display = "block";
     setTimeout(showSlides, 1000); // Change image every 1 second
 }
+showSlides();
 
 
-// Coffee shop content
+// coffee shop content begins
 
-// Define an array of hotspot coordinates
 var hotspots = [
-    { top: '20%', left: '20%', width: '20%', height: '20%', image: '2.jpg' },
-    { top: '50%', left: '50%', width: '20%', height: '20%', image: '3.jpg' }
-    // Add more hotspot objects as needed
+    { top: '80%', left: '40%', width: '20%', height: '20%', image: '2c.png' },
+    { top: '10%', left: '10%', width: '20%', height: '20%', image: '1c.png' },
+    { top: '10%', left: '30%', width: '15%', height: '15%', image: '3c.png' },
+    { top: '30%', left: '50%', width: '15%', height: '15%', image: '4c.png' },
+    { top: '50%', left: '70%', width: '15%', height: '15%', image: '5c.png' },
+    { top: '70%', left: '30%', width: '15%', height: '15%', image: '6c.png' },
+    { top: '70%', left: '70%', width: '15%', height: '15%', image: '7c.png' },
+    { top: '30%', left: '10%', width: '15%', height: '15%', image: '8c.png' }
 ];
 
-var mainImage = '1.jpg'; // Main background image
+var mainImage = '1c.png'; 
 
-// Set initial background image
 document.querySelector('.container').style.backgroundImage = "url('" + mainImage + "')";
 
-// Variable to track current background image
 var currentImage = mainImage;
 
-// Add event listeners to hotspots
 hotspots.forEach(function(hotspot) {
     var hotspotElement = document.createElement('div');
     hotspotElement.className = 'hotspot';
@@ -43,69 +43,121 @@ hotspots.forEach(function(hotspot) {
     hotspotElement.style.height = hotspot.height;
     hotspotElement.style.cursor = 'pointer';
     hotspotElement.addEventListener('click', function() {
-        if (currentImage !== mainImage) {
-            return; // Do nothing if an alternate image is already shown
-        }
         document.querySelector('.container').style.backgroundImage = "url('" + hotspot.image + "')";
-        document.getElementById('returnButton').style.display = 'block';
         currentImage = hotspot.image;
     });
     document.querySelector('.container').appendChild(hotspotElement);
 });
 
-// Add event listener to the return button
 document.getElementById('returnButton').addEventListener('click', function() {
     document.querySelector('.container').style.backgroundImage = "url('" + mainImage + "')";
-    document.getElementById('returnButton').style.display = 'none';
     currentImage = mainImage;
 });
+// coffee shop content ends
 
 
 
-var i = 0;
-var txt = 'Work, Reimagined';
-var speed = 50; // Speed of typing
-
+// typewriter - headline
+// Typewriter for headline
 function typeWriterHeadline() {
-    if (i < txt.length) {
-        document.getElementById("demo").innerHTML += txt.charAt(i);
-        i++;
-        setTimeout(typeWriterHeadline, speed); // Use `speed` variable here
-    } else {
-        // Call the quote typewriter after the headline is finished
-        // You might want to call another function here or just leave it empty if there's nothing else to do
-    }
-}
-
-// Fix the window.onload assignment to ensure it doesn't conflict with other onload functions
-window.onload = function() {
-    typeWriterHeadline();
-    // You can initialize other functions here to ensure they all load correctly.
-};
-
-function typeWriterQuote() {
-    var i = 0;
-    var txt = 'I feel like I get a little stir crazy when I\'m stuck in an apartment all day';
-    var speed = 75;
-    var pauseTime = 5000;
+    var headlineIndex = 0;
+    var headlineTxt = 'Work, Reimagined';
+    var headlineSpeed = 150; // Adjust the speed as needed
+    var headlinePauseTime = 1000; // Pause time for the headline
+    var headlineElement = document.getElementById("demo");
 
     function typeWriter() {
-        if (quoteIndex < quoteTxt.length) {
-        document.getElementById("quoteText").innerHTML += quoteTxt.charAt(quoteIndex); // Corrected the ID here
-        quoteIndex++;
-        setTimeout(typeWriter, quoteSpeed);
-    } else {
-        setTimeout(resetTypewriter, pauseTime);
+        if (headlineIndex < headlineTxt.length) {
+            headlineElement.innerHTML += headlineTxt.charAt(headlineIndex);
+            headlineIndex++;
+            setTimeout(typeWriter, headlineSpeed); 
+        } else {
+            setTimeout(resetHeadlineTypewriter, headlinePauseTime);
+        }
     }
-}
-    function resetTypewriter() {
-        quoteIndex = 0;
-        document.getElementById("quoteText").innerHTML = ''; // Corrected the ID here
+
+    function resetHeadlineTypewriter() {
+        headlineIndex = 0;
+        headlineElement.innerHTML = '';
         typeWriter();
     }
-    typeWriter();
-};
 
+    typeWriter(); // Start the typewriter effect
+}
+
+// Typewriter for first quote
+function typeWriterFirstQuote() {
+    var sentences = [
+        "'I feel like I get a little stir crazy when I'm stuck in an apartment all day'",
+    ];
+    var quoteIndex = 0;
+    var quoteSpeed = 75;
+    var quoteElement = document.getElementById("quoteText");
+    var pauseTime = 5000; // Pause time between quotes
+
+    function typeWriter() {
+        var charIndex = 0;
+        var sentence = sentences[quoteIndex];
+        var interval = setInterval(function() {
+            if (charIndex < sentence.length) {
+                quoteElement.innerHTML += sentence.charAt(charIndex);
+                charIndex++;
+            } else {
+                clearInterval(interval); // Stop typing after completing the sentence
+                // Pause before typing the next quote
+                setTimeout(function() {
+                    // Clear existing content
+                    quoteElement.innerHTML = '';
+                    // Move to the next quote or loop back to the first quote
+                    quoteIndex = (quoteIndex + 1) % sentences.length;
+                    // Start typing the next quote
+                    typeWriter();
+                }, pauseTime);
+            }
+        }, quoteSpeed);
+    }
+
+    typeWriter(); // Start the typewriter effect
+}
+
+// Typewriter for second quote
+function typeWriterSecondQuote() {
+    var sentences = [
+        "'They think it's going to be bad. That's the prediction'",
+    ];
+    var quoteIndex = 0;
+    var quoteSpeed = 75;
+    var quoteElement = document.getElementById("quoteThreeText");
+    var pauseTime = 5000; // Pause time between quotes
+
+    function typeWriter() {
+        var charIndex = 0;
+        var sentence = sentences[quoteIndex];
+        var interval = setInterval(function() {
+            if (charIndex < sentence.length) {
+                quoteElement.innerHTML += sentence.charAt(charIndex);
+                charIndex++;
+            } else {
+                clearInterval(interval); // Stop typing after completing the sentence
+                // Pause before typing the next quote
+                setTimeout(function() {
+                    // Clear existing content
+                    quoteElement.innerHTML = '';
+                    // Move to the next quote or loop back to the first quote
+                    quoteIndex = (quoteIndex + 1) % sentences.length;
+                    // Start typing the next quote
+                    typeWriter();
+                }, pauseTime);
+            }
+        }, quoteSpeed);
+    }
+
+    typeWriter(); // Start the typewriter effect
+}
+
+// Call typewriter functions when the window is loaded
 window.onload = function() {
-        typeWriterHeadline();
-    };
+    typeWriterHeadline();
+    typeWriterFirstQuote();
+    typeWriterSecondQuote();
+};

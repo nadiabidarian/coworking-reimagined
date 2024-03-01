@@ -14,45 +14,32 @@
 
 /* coffee shop content */
 .container {
-    width: 100%; /* Adjust as needed */
-    height: 56.222vw; /* Adjust as needed */
-    background-image: url('1.jpg');
-    background-size: contain; /* Adjust the image size */
-    position: relative; /* Center the image */
-    /* Add any other styling you want */
-
-     /* Responsive styles */
-     max-width: 100%; /* Ensures the div doesn't exceed the width of its container */
-
-}
-
-.hotspot {
+    width: 100%;
+    height: 56.222vw;
+    background-size: contain;
+    position: relative;
+    max-width: 100%;
+  }
+  
+  .hotspot {
     position: absolute;
     cursor: pointer;
-    /* Set the width, height, and position of your hotspot */
-}
-
-#hotspot1 {
-    top: 20%;
-    left: 20%;
-    width: 20%;
-    height: 20%;
-}
-
-#hotspot2 {
-    top: 50%;
-    left: 50%;
-    width: 20%;
-    height: 20%;
-}
+  }
+  
+  #returnButton {
+    display: none;
+  }
 
 /* END of coffee shop content here */
 
+/*pull out quotes */
 
 .pquote {
-    float: left;
+    float: right; /* Remove this */
+    text-align: center;
     font-family: 'courier';
-    width: 100px;
+    width: 400px;
+    height: 15px;
     font-size: 20px;
     color: crimson;
     font-weight: bold;
@@ -60,30 +47,38 @@
     margin: 0px 15px 15px 0px;
 }
 
+
 blockquote {
     margin: 0; /* gets rid of the default blockquote margin */
 }
 
-.pquotetwo {
-    display: inline-block;
-    width: 600px;
-    color: crimson;
-    font-weight: bold;
-    padding: 50px;
-    margin: 0px 15px 15px 0px;
-}
+.author {
+float: right; 
+text-align: center;
+font-family: 'courier';
+width: 400px;
+height: 0px;
+font-size: 20px;
+color: rgb(0, 0, 0);
+font-weight: bold;
+padding: 50px;
+margin: 0px 15px 15px 0px;
+} 
 
 blockquote {
     margin: 15; /* gets rid of the default blockquote margin */
 }
+
 .pquotethree {
-    float: right;
+    float: right; /* Remove this */
+    text-align: center;
     font-family: 'courier';
-    width: 100px;
+    width: 400px;
+    height: 15px;
     font-size: 20px;
     color: crimson;
     font-weight: bold;
-    padding: 30px;
+    padding: 50px;
     margin: 0px 15px 15px 0px;
 }
 
@@ -92,6 +87,19 @@ blockquote {
 }
 
 
+.authortwo {
+    float: right;
+    text-align: center;
+    font-family: 'courier';
+    width: auto; /* Adjust width to fit content */
+    font-size: 16px; /* Adjust font size as needed */
+    color: black; /* Adjust color as needed */
+    font-weight: bold;
+    padding: 10px; /* Adjust padding as needed */
+    margin: 0 0 15px 15px; /* Adjust margin as needed */
+    border: 1px solid black; /* Add border */
+    border-radius: 5px; /* Add border radius for rounded corners */
+}
 /* Banner */
 .banner{
     position: relative;
@@ -107,7 +115,7 @@ blockquote {
     width: 100%;
     max-width: 100%;
     margin: 0 auto;
-    height: auto;
+    height: 1200px;
 }
 
 .mySlides {
@@ -144,12 +152,14 @@ body{ /* general font stuff */
     margin: 0;
     padding: 0;
     background-color: #f5f5f5;
-    font-size: 20px;
+    font-size: 15px;
+    /* CSS to prevent text from moving */
+    min-height: 1em; /* Set a minimum height */
 }
 
 .content { /* put a box around the article + increase margins */
     margin-top: 0px;
-    width: 70%;
+    width: 40%;
     margin: auto;
     background-color: #f5ede2;
     padding: 215px;
