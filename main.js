@@ -14,12 +14,20 @@ function showSlides() {
 showSlides();
 
 
+// coffee shop content begins
+
 var hotspots = [
-    { top: '20%', left: '20%', width: '20%', height: '20%', image: '2.jpg' },
-    { top: '50%', left: '50%', width: '20%', height: '20%', image: '3.jpg' }
+    { top: '80%', left: '40%', width: '20%', height: '20%', image: '2c.png' },
+    { top: '10%', left: '10%', width: '20%', height: '20%', image: '1c.png' },
+    { top: '10%', left: '30%', width: '15%', height: '15%', image: '3c.png' },
+    { top: '30%', left: '50%', width: '15%', height: '15%', image: '4c.png' },
+    { top: '50%', left: '70%', width: '15%', height: '15%', image: '5c.png' },
+    { top: '70%', left: '30%', width: '15%', height: '15%', image: '6c.png' },
+    { top: '70%', left: '70%', width: '15%', height: '15%', image: '7c.png' },
+    { top: '30%', left: '10%', width: '15%', height: '15%', image: '8c.png' }
 ];
 
-var mainImage = '1.jpg'; 
+var mainImage = '1c.png'; 
 
 document.querySelector('.container').style.backgroundImage = "url('" + mainImage + "')";
 
@@ -35,11 +43,7 @@ hotspots.forEach(function(hotspot) {
     hotspotElement.style.height = hotspot.height;
     hotspotElement.style.cursor = 'pointer';
     hotspotElement.addEventListener('click', function() {
-        if (currentImage !== mainImage) {
-            return; 
-        }
         document.querySelector('.container').style.backgroundImage = "url('" + hotspot.image + "')";
-        document.getElementById('returnButton').style.display = 'block';
         currentImage = hotspot.image;
     });
     document.querySelector('.container').appendChild(hotspotElement);
@@ -47,9 +51,11 @@ hotspots.forEach(function(hotspot) {
 
 document.getElementById('returnButton').addEventListener('click', function() {
     document.querySelector('.container').style.backgroundImage = "url('" + mainImage + "')";
-    document.getElementById('returnButton').style.display = 'none';
     currentImage = mainImage;
 });
+// coffee shop content ends
+
+
 
 // typewriter - headline
 // Typewriter for headline
