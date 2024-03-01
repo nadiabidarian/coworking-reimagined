@@ -23,7 +23,6 @@ document.querySelector('.container').style.backgroundImage = "url('" + mainImage
 
 var currentImage = mainImage;
 
-// Add hotspot only if the main image is '1c.png'
 if (mainImage === '1c.png') {
     hotspots.push({ top: '80%', left: '40%', width: '20%', height: '20%', image: '2c.png' });
 } else if (mainImage === '2c.png') {
@@ -36,7 +35,10 @@ if (mainImage === '1c.png') {
         { top: '70%', left: '70%', width: '15%', height: '15%', image: '7c.png' },
         { top: '30%', left: '10%', width: '15%', height: '15%', image: '8c.png' }
     );
-} else if (mainImage === '3c.png' || mainImage === '4c.png' || mainImage === '5c.png' || mainImage === '6c.png' || mainImage === '7c.png' || mainImage === '8c.png') {
+}
+
+// Adding hotspots for returning to '2c.png' for images '3c.png' through '8c.png'
+if (mainImage === '3c.png' || mainImage === '4c.png' || mainImage === '5c.png' || mainImage === '6c.png' || mainImage === '7c.png' || mainImage === '8c.png') {
     hotspots.push({ top: '0%', left: '0%', width: '20%', height: '20%', image: '2c.png' });
 }
 
@@ -60,6 +62,7 @@ document.getElementById('returnButton').addEventListener('click', function() {
     document.querySelector('.container').style.backgroundImage = "url('" + mainImage + "')";
     currentImage = mainImage;
 });
+
 
 
 // coffee shop content ends
