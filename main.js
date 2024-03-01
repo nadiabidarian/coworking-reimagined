@@ -81,18 +81,32 @@ function typeWriterHeadline() {
 
 // Typewriter for first quote
 function typeWriterFirstQuote() {
-    var sentence = "'I feel like I get a little stir crazy when I'm stuck in an apartment all day'";
+    var sentences = [
+        "'I feel like I get a little stir crazy when I'm stuck in an apartment all day'",
+    ];
+    var quoteIndex = 0;
     var quoteSpeed = 75;
     var quoteElement = document.getElementById("quoteText");
+    var pauseTime = 5000; // Pause time between quotes
 
     function typeWriter() {
         var charIndex = 0;
+        var sentence = sentences[quoteIndex];
         var interval = setInterval(function() {
             if (charIndex < sentence.length) {
                 quoteElement.innerHTML += sentence.charAt(charIndex);
                 charIndex++;
             } else {
                 clearInterval(interval); // Stop typing after completing the sentence
+                // Pause before typing the next quote
+                setTimeout(function() {
+                    // Clear existing content
+                    quoteElement.innerHTML = '';
+                    // Move to the next quote or loop back to the first quote
+                    quoteIndex = (quoteIndex + 1) % sentences.length;
+                    // Start typing the next quote
+                    typeWriter();
+                }, pauseTime);
             }
         }, quoteSpeed);
     }
@@ -102,29 +116,42 @@ function typeWriterFirstQuote() {
 
 // Typewriter for second quote
 function typeWriterSecondQuote() {
-    var sentence = "'They think it's going to be bad. That's the prediction'";
+    var sentences = [
+        "'They think it's going to be bad. That's the prediction'",
+    ];
+    var quoteIndex = 0;
     var quoteSpeed = 75;
     var quoteElement = document.getElementById("quoteThreeText");
+    var pauseTime = 5000; // Pause time between quotes
 
     function typeWriter() {
         var charIndex = 0;
+        var sentence = sentences[quoteIndex];
         var interval = setInterval(function() {
             if (charIndex < sentence.length) {
                 quoteElement.innerHTML += sentence.charAt(charIndex);
                 charIndex++;
             } else {
-                clearInterval(interval); 
+                clearInterval(interval); // Stop typing after completing the sentence
+                // Pause before typing the next quote
+                setTimeout(function() {
+                    // Clear existing content
+                    quoteElement.innerHTML = '';
+                    // Move to the next quote or loop back to the first quote
+                    quoteIndex = (quoteIndex + 1) % sentences.length;
+                    // Start typing the next quote
+                    typeWriter();
+                }, pauseTime);
             }
         }, quoteSpeed);
     }
 
-    typeWriter(); 
+    typeWriter(); // Start the typewriter effect
 }
 
+// Call typewriter functions when the window is loaded
 window.onload = function() {
     typeWriterHeadline();
     typeWriterFirstQuote();
     typeWriterSecondQuote();
 };
-
-
