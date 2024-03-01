@@ -51,11 +51,11 @@
 /*pull out quotes */
 
 .pquote {
-    float: left;
+    float: right; /* Remove this */
     text-align: center;
     font-family: 'courier';
     width: 400px;
-    height: 200px;
+    height: 15px;
     font-size: 20px;
     color: crimson;
     font-weight: bold;
@@ -68,26 +68,33 @@ blockquote {
     margin: 0; /* gets rid of the default blockquote margin */
 }
 
-.pquotetwo {
-    display: inline-block;
-    width: 600px;
-    color: crimson;
-    font-weight: bold;
-    padding: 50px;
-    margin: 0px 15px 15px 0px;
-}
+.author {
+float: right; 
+text-align: center;
+font-family: 'courier';
+width: 400px;
+height: 0px;
+font-size: 20px;
+color: rgb(0, 0, 0);
+font-weight: bold;
+padding: 50px;
+margin: 0px 15px 15px 0px;
+} 
 
 blockquote {
     margin: 15; /* gets rid of the default blockquote margin */
 }
+
 .pquotethree {
-    float: right;
+    float: right; /* Remove this */
+    text-align: center;
     font-family: 'courier';
-    width: 100px;
+    width: 400px;
+    height: 15px;
     font-size: 20px;
     color: crimson;
     font-weight: bold;
-    padding: 30px;
+    padding: 50px;
     margin: 0px 15px 15px 0px;
 }
 
@@ -96,6 +103,18 @@ blockquote {
 }
 
 
+.authortwo {
+    float: right; 
+text-align: center;
+font-family: 'courier';
+width: 400px;
+height: 0px;
+font-size: 20px;
+color: rgb(0, 0, 0);
+font-weight: bold;
+padding: 50px;
+margin: 0px 15px 15px 0px;
+}
 /* Banner */
 .banner{
     position: relative;
