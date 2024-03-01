@@ -15,15 +15,30 @@ showSlides();
 
 
 // coffee shop content begins
-var hotspots = [
-    { top: '80%', left: '40%', width: '20%', height: '20%', image: '2c.png' }
-];
+var hotspots = [];
 
 var mainImage = '1c.png'; 
 
 document.querySelector('.container').style.backgroundImage = "url('" + mainImage + "')";
 
 var currentImage = mainImage;
+
+// Add hotspot only if the main image is '1c.png'
+if (mainImage === '1c.png') {
+    hotspots.push({ top: '80%', left: '40%', width: '20%', height: '20%', image: '2c.png' });
+} else if (mainImage === '2c.png') {
+    hotspots.push(
+        { top: '0%', left: '0%', width: '20%', height: '20%', image: '1c.png' },
+        { top: '10%', left: '30%', width: '15%', height: '15%', image: '3c.png' },
+        { top: '30%', left: '50%', width: '15%', height: '15%', image: '4c.png' },
+        { top: '50%', left: '70%', width: '15%', height: '15%', image: '5c.png' },
+        { top: '70%', left: '30%', width: '15%', height: '15%', image: '6c.png' },
+        { top: '70%', left: '70%', width: '15%', height: '15%', image: '7c.png' },
+        { top: '30%', left: '10%', width: '15%', height: '15%', image: '8c.png' }
+    );
+} else if (mainImage === '3c.png' || mainImage === '4c.png' || mainImage === '5c.png' || mainImage === '6c.png' || mainImage === '7c.png' || mainImage === '8c.png') {
+    hotspots.push({ top: '0%', left: '0%', width: '20%', height: '20%', image: '2c.png' });
+}
 
 hotspots.forEach(function(hotspot) {
     var hotspotElement = document.createElement('div');
@@ -45,7 +60,6 @@ document.getElementById('returnButton').addEventListener('click', function() {
     document.querySelector('.container').style.backgroundImage = "url('" + mainImage + "')";
     currentImage = mainImage;
 });
-
 
 
 // coffee shop content ends
