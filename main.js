@@ -23,10 +23,12 @@ document.querySelector('.container').style.backgroundImage = "url('" + mainImage
 
 var currentImage = mainImage;
 
+// Hotspots for transitioning from '1c.png' to '2c.png'
 if (mainImage === '1c.png') {
     hotspots.push({ top: '80%', left: '40%', width: '20%', height: '20%', image: '2c.png' });
 }
 
+// Hotspots for '2c.png'
 if (mainImage === '2c.png') {
     hotspots.push(
         { top: '0%', left: '0%', width: '20%', height: '20%', image: '1c.png' },
@@ -39,11 +41,12 @@ if (mainImage === '2c.png') {
     );
 }
 
-// Adding hotspots for returning to '2c.png' for images '3c.png' through '8c.png'
+// Hotspots for returning to '2c.png' for images '3c.png' through '8c.png'
 if (mainImage === '3c.png' || mainImage === '4c.png' || mainImage === '5c.png' || mainImage === '6c.png' || mainImage === '7c.png' || mainImage === '8c.png') {
     hotspots.push({ top: '0%', left: '0%', width: '20%', height: '20%', image: '2c.png' });
 }
 
+// Adding hotspots for returning to '2c.png' for images '3c.png' through '8c.png'
 hotspots.forEach(function(hotspot) {
     var hotspotElement = document.createElement('div');
     hotspotElement.className = 'hotspot';
