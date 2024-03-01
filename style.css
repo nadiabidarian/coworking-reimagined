@@ -104,16 +104,17 @@ blockquote {
 
 
 .authortwo {
-    float: right; 
-text-align: center;
-font-family: 'courier';
-width: 400px;
-height: 0px;
-font-size: 20px;
-color: rgb(0, 0, 0);
-font-weight: bold;
-padding: 50px;
-margin: 0px 15px 15px 0px;
+    float: right;
+    text-align: center;
+    font-family: 'courier';
+    width: auto; /* Adjust width to fit content */
+    font-size: 16px; /* Adjust font size as needed */
+    color: black; /* Adjust color as needed */
+    font-weight: bold;
+    padding: 10px; /* Adjust padding as needed */
+    margin: 0 0 15px 15px; /* Adjust margin as needed */
+    border: 1px solid black; /* Add border */
+    border-radius: 5px; /* Add border radius for rounded corners */
 }
 /* Banner */
 .banner{
@@ -167,14 +168,14 @@ body{ /* general font stuff */
     margin: 0;
     padding: 0;
     background-color: #f5f5f5;
-    font-size: 20px;
+    font-size: 15px;
     /* CSS to prevent text from moving */
     min-height: 1em; /* Set a minimum height */
 }
 
 .content { /* put a box around the article + increase margins */
     margin-top: 0px;
-    width: 70%;
+    width: 40%;
     margin: auto;
     background-color: #f5ede2;
     padding: 215px;
