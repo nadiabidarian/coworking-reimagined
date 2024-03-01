@@ -5,6 +5,7 @@
     font-family: 'Lora', 'Times New Roman', serif;
 }
 
+
 /* quote */
 
 .style{
@@ -122,17 +123,25 @@ blockquote {
 img {width: 100%;}
 
 .headline{ /* make sure the headline is on top of slideshow-container */
-    font-family:'Times New Roman', Times, serif;
+    font-family: 'DM Sans', sans-serif;
     position: absolute;
     top: 5%;
     left: 50%;
     transform: translateX(-50%);
-    color: white;
+    color: #e33d30;
     font-size: 150px;
     z-index: 2;
+    text-transform: uppercase;
+}
+
+@media (max-width: 700px) {
+    .headline {
+        font-size: 60px;
+    }
 }
 
 /* Article */
+
 
 body{ /* general font stuff */
     font-family: 'Times New Roman', Times, serif;
@@ -148,13 +157,14 @@ body{ /* general font stuff */
     margin-top: 0px;
     width: 70%;
     margin: auto;
-    background-color: rgb(254, 241, 216);
+    background-color: #f5ede2;
     padding: 215px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 
 .content h3 {
     margin-bottom: 20px;
+    font-family: 'Lora','Times New Roman', serif;
 }
 
 .image-container img {
