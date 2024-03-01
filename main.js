@@ -52,29 +52,35 @@ document.getElementById('returnButton').addEventListener('click', function() {
 });
 
 // typewriter - headline
-var headlineIndex = 0;
-var headlineTxt = 'Work, Reimagined';
-var headlineSpeed = 100; // Adjust the speed as needed
-var headlinePauseTime = 5000; // Pause time for the headline
-
+// Typewriter for headline
 function typeWriterHeadline() {
-    if (headlineIndex < headlineTxt.length) {
-        document.getElementById("demo").innerHTML += headlineTxt.charAt(headlineIndex);
-        headlineIndex++;
-        setTimeout(typeWriterHeadline, headlineSpeed); 
-    } else {
-        setTimeout(resetHeadlineTypewriter, headlinePauseTime);
+    var headlineIndex = 0;
+    var headlineTxt = 'Work, Reimagined';
+    var headlineSpeed = 150; // Adjust the speed as needed
+    var headlinePauseTime = 1000; // Pause time for the headline
+    var headlineElement = document.getElementById("demo");
+
+    function typeWriter() {
+        if (headlineIndex < headlineTxt.length) {
+            headlineElement.innerHTML += headlineTxt.charAt(headlineIndex);
+            headlineIndex++;
+            setTimeout(typeWriter, headlineSpeed); 
+        } else {
+            setTimeout(resetHeadlineTypewriter, headlinePauseTime);
+        }
     }
+
+    function resetHeadlineTypewriter() {
+        headlineIndex = 0;
+        headlineElement.innerHTML = '';
+        typeWriter();
+    }
+
+    typeWriter(); // Start the typewriter effect
 }
 
-function resetHeadlineTypewriter() {
-    headlineIndex = 0;
-    document.getElementById("demo").innerHTML = '';
-    typeWriterHeadline();
-}
-
-// Quote typewriter
-function typeWriterQuote() {
+// Typewriter for first quote
+function typeWriterFirstQuote() {
     var sentence = "'I feel like I get a little stir crazy when I'm stuck in an apartment all day'";
     var quoteSpeed = 75;
     var quoteElement = document.getElementById("quoteText");
@@ -92,19 +98,33 @@ function typeWriterQuote() {
     }
 
     typeWriter(); // Start the typewriter effect
-    window.addEventListener('scroll', function() {
-        var quoteText = document.getElementById("quoteText");
-        if (isElementInViewport(quoteText)) {
-            // If the quote element is in the viewport, start the typewriter effect again
-            typeWriter();
-        }
-    });
-
-
 }
 
+// Typewriter for second quote
+function typeWriterSecondQuote() {
+    var sentence = "'They think it's going to be bad. That's the prediction'";
+    var quoteSpeed = 75;
+    var quoteElement = document.getElementById("quoteThreeText");
+
+    function typeWriter() {
+        var charIndex = 0;
+        var interval = setInterval(function() {
+            if (charIndex < sentence.length) {
+                quoteElement.innerHTML += sentence.charAt(charIndex);
+                charIndex++;
+            } else {
+                clearInterval(interval); 
+            }
+        }, quoteSpeed);
+    }
+
+    typeWriter(); 
+}
 
 window.onload = function() {
     typeWriterHeadline();
-    typeWriterQuote();
+    typeWriterFirstQuote();
+    typeWriterSecondQuote();
 };
+
+
