@@ -25,7 +25,9 @@ var currentImage = mainImage;
 
 if (mainImage === '1c.png') {
     hotspots.push({ top: '80%', left: '40%', width: '20%', height: '20%', image: '2c.png' });
-} else if (mainImage === '2c.png') {
+}
+
+if (mainImage === '2c.png') {
     hotspots.push(
         { top: '0%', left: '0%', width: '20%', height: '20%', image: '1c.png' },
         { top: '10%', left: '30%', width: '15%', height: '15%', image: '3c.png' },
