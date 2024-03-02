@@ -70,7 +70,7 @@ hotspots.forEach(function(hotspot) {
 document.getElementById('returnButton').addEventListener('click', function() {
     document.querySelector('.container').style.backgroundImage = "url('" + mainImage + "')";
     currentImage = mainImage;
-});
+})
 
 
 // coffee shop content ends
