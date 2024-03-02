@@ -35,18 +35,17 @@
 /*pull out quotes */
 
 .pquote {
-    float: right; /* Remove this */
+    float: right;
     text-align: center;
     font-family: 'courier';
     width: 200px;
-    height: 100px;
-    font-size: 20px;
+    height: 0px; /* Adjusted to allow the element to expand to fit its content */
+    font-size: 18px; /* Slightly reduced font size for better readability */
     color: crimson;
     font-weight: bold;
-    padding: 50px;
-    margin: -30px 15px 15px 0px;
+    padding: 50px; /* Reduced padding for better spacing */
+    margin: -60px 0px 10px 0px; /* Adjusted margin for better spacing */
 }
-
 
 blockquote {
     margin: 0; /* gets rid of the default blockquote margin */
@@ -58,11 +57,11 @@ text-align: left;
 font-family: 'courier';
 width: 200px;
 height: 25px;
-font-size: 20px;
+font-size: 15px;
 color: rgb(0, 0, 0);
 font-weight: bold;
 padding: 50px;
-margin: -15px -10px -10px 20px;
+margin: 55px 0px 0px 0px;
     } 
 
 
@@ -75,12 +74,12 @@ blockquote {
     text-align: center;
     font-family: 'courier';
     width: 200px;
-    height: 0px;
+    height: 25px;
     font-size: 20px;
     color: crimson;
     font-weight: bold;
     padding: 50px;
-    margin: 0px 15px 15px 0px;
+    margin: -30px 15px 0px 0px;
 }
 
 blockquote {
@@ -90,15 +89,15 @@ blockquote {
 
 .authortwo {
     float: left; 
-    text-align: center;
+    text-align: left;
     font-family: 'courier';
-    width: 150px;
+    width: 200px;
     height: 25px;
-    font-size: 20px;
+    font-size: 15px;
     color: rgb(0, 0, 0);
     font-weight: bold;
     padding: 50px;
-    margin: -30px 15px 45px 50px;
+    margin: -30px 15px 10px 0px;
     } 
 
 /* Banner */

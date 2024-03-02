@@ -143,7 +143,7 @@ function typeWriterFirstQuote() {
 // Typewriter for second quote
 function typeWriterSecondQuote() {
     var sentences = [
-        "'They think it's going to be bad. That's the prediction'",
+        "'They think it's going to be bad. That's the prediction.'",
     ];
     var quoteIndex = 0;
     var quoteSpeed = 75;
