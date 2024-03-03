@@ -13,10 +13,6 @@ function showSlides() {
 }
 showSlides();
 
-
-// coffee shop content ends
-
-
 // Function to update the current image and display hotspots accordingly
 function updateMainImage(newImage) {
     mainImage = newImage; // Update the global variable holding the current main image
@@ -53,7 +49,24 @@ function displayHotspots() {
     if (mainImage === '3c.png' || mainImage === '4c.png' || mainImage === '5c.png' || mainImage === '6c.png' || mainImage === '7c.png' || mainImage === '8c.png') {
     hotspots.push({ top: '0%', left: '0%', width: '20%', height: '20%', image: '2c.png' });
     }
-    }
+}
+
+document.addEventListener("DOMContentLoaded", function() {
+    const mainImage = document.getElementById('mainImage');
+    const hotspots = document.querySelectorAll('.hotspot');
+    const returnButton = document.getElementById('returnButton');
+
+    hotspots.forEach(function(hotspot) {
+        hotspot.addEventListener("click", function() {
+            const nextImage = this.dataset.image;
+            mainImage.src = nextImage;
+        });
+    });
+
+    returnButton.addEventListener("click", function() {
+        mainImage.src = "2c.png"; // Change to whatever your initial image is
+    });
+});
 
 
 // coffee shop content ends
