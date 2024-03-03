@@ -24,7 +24,7 @@
 .hotspot {
     position: absolute;
     cursor: pointer;
-    background-color: rgba(255, 0, 0, 0.5); /* Just for visibility, you can remove this in production */
+    background-color: transparent; /* Just for visibility, you can remove this in production */
 }
   
 #returnButton {
