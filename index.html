@@ -62,11 +62,37 @@ window.onload = function() {
 </html>
 <!-- coffee shop content -->
 
-<div class="container">
-    <img src="1c.png" alt="Coffee Shop" id="mainImage">
-    <div id="hotspot1" class="hotspot" style="top: 80%; left: 40%; width: 20%; height: 20%;" data-image="2c.png"></div>
-    <button id="returnButton">Return</button>
-</div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clickable Image Map</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <img src="1c.png" alt="Coffee Shop" id="mainImage">
+        <!-- Hotspot for 1c.png to 2c.png -->
+        <div id="hotspot1" class="hotspot" style="display: none; top: 80%; left: 40%; width: 20%; height: 20%;" data-image="2c.png"></div>
+        <!-- Hotspots for 2c.png -->
+        <div id="hotspot2" class="hotspot" style="display: none; top: 0%; left: 0%; width: 20%; height: 20%;" data-image="1c.png"></div>
+        <div id="hotspot3" class="hotspot" style="display: none; top: 10%; left: 30%; width: 15%; height: 15%;" data-image="3c.png"></div>
+        <div id="hotspot4" class="hotspot" style="display: none; top: 30%; left: 50%; width: 15%; height: 15%;" data-image="4c.png"></div>
+        <div id="hotspot5" class="hotspot" style="display: none; top: 50%; left: 70%; width: 15%; height: 15%;" data-image="5c.png"></div>
+        <div id="hotspot6" class="hotspot" style="display: none; top: 70%; left: 30%; width: 15%; height: 15%;" data-image="6c.png"></div>
+        <div id="hotspot7" class="hotspot" style="display: none; top: 70%; left: 70%; width: 15%; height: 15%;" data-image="7c.png"></div>
+        <div id="hotspot8" class="hotspot" style="display: none; top: 30%; left: 10%; width: 15%; height: 15%;" data-image="8c.png"></div>
+        <!-- Return hotspot for images 3c.png through 8c.png -->
+        <div id="returnHotspot" class="hotspot" style="display: none; top: 0%; left: 0%; width: 20%; height: 20%;" data-image="2c.png"></div>
+        <!-- End of hotspots -->
+        <button id="returnButton" style="display: none;">Return</button>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>
+
 
 
 <!-- written content -->

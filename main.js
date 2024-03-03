@@ -13,43 +13,8 @@ function showSlides() {
 }
 showSlides();
 
-// Function to update the current image and display hotspots accordingly
-function updateMainImage(newImage) {
-    mainImage = newImage; // Update the global variable holding the current main image
-    displayHotspots(); // Call the function to display hotspots for the new image
-}
 
-// Function to display hotspots based on the current main image
-function displayHotspots() {
-    // Clear existing hotspots or hide them
-    // For example, if you're using divs for hotspots, you could hide all and then show relevant ones
-    document.querySelectorAll('.hotspot').forEach(hotspot => hotspot.style.display = 'none');
-
-    if (mainImage === '1c.png') {
-        hotspots.push({ top: '80%', left: '40%', width: '20%', height: '20%', image: '2c.png' });
-        // For example:
-        // document.getElementById('hotspot1').style.display = 'block';
-    } else if (mainImage === '2c.png') {
-        hotspots.push(
-            { top: '0%', left: '0%', width: '20%', height: '20%', image: '1c.png' },
-            { top: '10%', left: '30%', width: '15%', height: '15%', image: '3c.png' },
-            { top: '30%', left: '50%', width: '15%', height: '15%', image: '4c.png' },
-            { top: '50%', left: '70%', width: '15%', height: '15%', image: '5c.png' },
-            { top: '70%', left: '30%', width: '15%', height: '15%', image: '6c.png' },
-            { top: '70%', left: '70%', width: '15%', height: '15%', image: '7c.png' },
-            { top: '30%', left: '10%', width: '15%', height: '15%', image: '8c.png' }
-        );
-    }
-    // Hotspots for returning to '2c.png' for images '3c.png' through '8c.png'
-    if (mainImage === '3c.png' || mainImage === '4c.png' || mainImage === '5c.png' || mainImage === '6c.png' || mainImage === '7c.png' || mainImage === '8c.png') {
-    hotspots.push({ top: '0%', left: '0%', width: '20%', height: '20%', image: '2c.png' });
-    }
-
-    // Adding hotspots for each image '3c.png' through '8c.png' to return to '2c.png'
-    if (mainImage === '3c.png' || mainImage === '4c.png' || mainImage === '5c.png' || mainImage === '6c.png' || mainImage === '7c.png' || mainImage === '8c.png') {
-    hotspots.push({ top: '0%', left: '0%', width: '20%', height: '20%', image: '2c.png' });
-    }
-}
+// coffee shop content begins
 
 document.addEventListener("DOMContentLoaded", function() {
     const mainImage = document.getElementById('mainImage');
@@ -63,10 +28,40 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     });
 
+    mainImage.addEventListener("load", function() {
+        // Hide all hotspots by default
+        hotspots.forEach(function(hotspot) {
+            hotspot.style.display = 'none';
+        });
+
+        // Show relevant hotspots based on the current image
+        if (mainImage.src.includes("1c.png")) {
+            document.getElementById('hotspot1').style.display = 'block';
+        } else if (mainImage.src.includes("2c.png")) {
+            document.getElementById('hotspot2').style.display = 'block';
+            document.getElementById('hotspot3').style.display = 'block';
+            document.getElementById('hotspot4').style.display = 'block';
+            document.getElementById('hotspot5').style.display = 'block';
+            document.getElementById('hotspot6').style.display = 'block';
+            document.getElementById('hotspot7').style.display = 'block';
+            document.getElementById('hotspot8').style.display = 'block';
+        } else {
+            document.getElementById('returnHotspot').style.display = 'block';
+        }
+
+        // Show or hide return button based on the current image
+        if (mainImage.src.includes("1c.png") || mainImage.src.includes("2c.png")) {
+            returnButton.style.display = 'none';
+        } else {
+            returnButton.style.display = 'block';
+        }
+    });
+
     returnButton.addEventListener("click", function() {
         mainImage.src = "2c.png"; // Change to whatever your initial image is
     });
 });
+
 
 
 // coffee shop content ends
