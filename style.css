@@ -126,7 +126,11 @@ blockquote {
     z-index: 1; /* I removed position: absolute to keep normal document flow */
 }
 
-img {width: 100%;}
+img {width: 100%;
+    object-fit: cover;
+    height: 85%;
+    object-position: center bottom;
+}
 
 .headline{ /* make sure the headline is on top of slideshow-container */
     font-family: 'DM Sans', sans-serif;
