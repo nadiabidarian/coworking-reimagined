@@ -27,9 +27,7 @@
     background-color: transparent; /* Just for visibility, you can remove this in production */
 }
 
-
-
-  #returnButton {
+#returnButton {
     display: none;
 }
 
