@@ -99,7 +99,7 @@ document.addEventListener("DOMContentLoaded", function() {
 // Typewriter for first quote
 function typeWriterFirstQuote() {
     var sentences = [
-        "'I feel like I get a little stir crazy when I'm stuck in an apartment all day'",
+        "'I feel like I get a little stir crazy when I'm stuck in an apartment all day.'",
     ];
     var quoteIndex = 0;
     var quoteSpeed = 75;
