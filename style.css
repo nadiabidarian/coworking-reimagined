@@ -127,9 +127,6 @@ blockquote {
 }
 
 img {width: 100%;
-    object-fit: cover;
-    height: 85%;
-    object-position: center bottom;
 }
 
 .headline{ /* make sure the headline is on top of slideshow-container */
