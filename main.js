@@ -22,6 +22,16 @@ document.addEventListener("DOMContentLoaded", function() {
     const returnButton = document.getElementById('returnButton');
 
     hotspots.forEach(function(hotspot) {
+        hotspot.addEventListener('mouseenter', function() {
+            // Change the style or content of the hotspot on hover
+            this.style.backgroundColor = 'rgba(255, 0, 0, 0.5)';
+        }, false);
+
+        hotspot.addEventListener('mouseleave', function() {
+            // Revert the style or content of the hotspot when hover ends
+            this.style.backgroundColor = 'transparent';
+        }, false);
+        
         hotspot.addEventListener("click", function() {
             const nextImage = this.dataset.image;
             mainImage.src = nextImage;
