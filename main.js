@@ -70,7 +70,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
 // typewriter - headline
 // Typewriter for headline
-function typeWriterHeadline() {
+/* function typeWriterHeadline() {
     var headlineIndex = 0;
     var headlineTxt = 'Work, Reimagined';
     var headlineSpeed = 150; // Adjust the speed as needed
@@ -94,7 +94,7 @@ function typeWriterHeadline() {
     }
 
     typeWriter(); // Start the typewriter effect
-}
+} */
 
 // Typewriter for first quote
 function typeWriterFirstQuote() {
@@ -168,7 +168,6 @@ function typeWriterSecondQuote() {
 
 // Call typewriter functions when the window is loaded
 window.onload = function() {
-    typeWriterHeadline();
     typeWriterFirstQuote();
     typeWriterSecondQuote();
 };

@@ -39,14 +39,14 @@
 .pquote {
     float: right;
     text-align: center;
-    font-family: 'courier';
+    font-family: 'sans serif';
     width: 200px;
     height: 0px; /* Adjusted to allow the element to expand to fit its content */
     font-size: 18px; /* Slightly reduced font size for better readability */
     color: crimson;
     font-weight: bold;
     padding: 50px; /* Reduced padding for better spacing */
-    margin: -60px 0px 10px 0px; /* Adjusted margin for better spacing */
+    margin: -30px 0px 10px 0px; /* Adjusted margin for better spacing */
 }
 
 blockquote {
@@ -56,14 +56,14 @@ blockquote {
 .author {
 float: right; 
 text-align: left;
-font-family: 'courier';
+font-family: 'Sans Serif';
 width: 200px;
 height: 25px;
 font-size: 15px;
 color: rgb(0, 0, 0);
 font-weight: bold;
 padding: 50px;
-margin: 55px 0px 0px 0px;
+margin: 20px 0px 15px 0px;
     } 
 
 
@@ -74,14 +74,14 @@ blockquote {
 .pquotethree {
     float: left; /* Remove this */
     text-align: center;
-    font-family: 'courier';
+    font-family: 'Sans Serif';
     width: 200px;
     height: 25px;
     font-size: 20px;
     color: crimson;
     font-weight: bold;
     padding: 50px;
-    margin: -30px 15px 0px 0px;
+    margin: -20px 15px -15px 0px;
 }
 
 blockquote {
@@ -91,15 +91,15 @@ blockquote {
 
 .authortwo {
     float: left; 
-    text-align: left;
-    font-family: 'courier';
+    text-align: center;
+    font-family: 'Sans Serif';
     width: 200px;
     height: 25px;
     font-size: 15px;
     color: rgb(0, 0, 0);
     font-weight: bold;
     padding: 50px;
-    margin: -30px 15px 10px 0px;
+    margin: -15px 15px 20px 0px;
     } 
 
 /* Banner */
