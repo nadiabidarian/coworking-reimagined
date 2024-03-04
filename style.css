@@ -173,6 +173,12 @@ body{ /* general font stuff */
     font-family: 'Lora','Times New Roman', serif;
 }
 
+.content h4 {
+    font-family: 'Lora', 'Times New Roman', serif;
+    color: #e33d30;
+    font-size: 20px;
+}
+
 .image-container img {
     width: 100%;
     max-width: 300px; /* Limit the width of stacked images */
